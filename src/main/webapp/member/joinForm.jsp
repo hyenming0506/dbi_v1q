@@ -56,12 +56,12 @@
         <input type='password' name='passwd' id='passwd' value='1234' required="required">
       </li>
       <li>
-        <label class='label' for='mname'>성명</label>
-        <input type='text' name='mname' id='mname' value='왕눈이' required="required">
+        <label class='label' for='ename'>성명</label>
+        <input type='text' name='ename' id='ename' value='왕눈이' required="required">
       </li>
       <li>
-        <label class='label' for='tel'>전화번호</label>
-        <input type="tel" name='tel' id='tel' value='010-0000-0000'> 예) 010-0000-0000
+        <label class='label' for='phone'>전화번호</label>
+        <input type="tel" name='phone' id='phone' value='010-0000-0000'> 예) 010-0000-0000
       </li>
       <li>
         <label class='label' for='zipcode'>우편번호</label>
