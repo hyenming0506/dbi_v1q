@@ -1,292 +1,360 @@
 /* version 9 */
-  @font-face{
-    font-family: '나눔손글씨 펜';
-    src: url(/blog_v2jq/font/nanum.ttf) format('truetype');
-  } 
-   /* "Segoe UI", "Meiryo", "Malgun Gothic" !important; */
-  *{ 
-    font-family: "나눔손글씨 펜", "나눔손글씨 붓", "나눔고딕", "나눔명조", "Consolas" !important;
-    font-size: 12pt;
-    margin:0px;
-    padding:0px; 
+
+@font-face {
+  font-family: '나눔손글씨 펜';
+  src: url(/blog_v2jq/font/nanum.ttf) format('truetype');
+}
+/* "Segoe UI", "Meiryo", "Malgun Gothic" !important; */
+* {
+  font-family: "나눔손글씨 펜", "나눔손글씨 붓", "나눔고딕", "나눔명조", "Consolas" !important;
+  font-size: 12pt;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #ffe8e8;
+  width: 80%;
+  margin: 0px auto;
+  background-image: url('/blog_v2jq/menu/images/bg_i.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right bottom;
+  color: #373737;
+}
+
+TABLE {
+  border: none;
+  margin: 0px auto;
+}
+
+TD {
+  padding-left: 5px;
+}
+
+/* ====================================== */
+/* 의사 클래스(pseudo-class)를 이용한  CSS 적용 */
+/* 선언 순서가 변경되면 작동 안됨. link->visited->hover->active */
+A:link { /* 방문전 상태 */
+  text-decoration: none;
+  color: #373737;
+}
+
+A:VISITED { /* 방문후 상태 */
+  text-decoration: none;
+  color: #373737;
+}
+
+A:hover { /* A태그에 마우스가 올라간 상태 */
+  text-decoration: underline;
+  color: #5555FF;
+}
+
+A:ACTIVE { /* A태그를 클릭한 상태 */
+  text-decoration: underline;
+  color: #5555FF;
+}
+/* ====================================== */
+.table {
+  border-style: none;
+  background-color: #fff0f0;
+  border-collapse: collapse; /* 셀 경계선 병합 */
+  margin: 0px auto;
+  width: 100%;
+}
+
+.th {
+  border-top-style: solid;
+  border-right-style: none;
+  border-bottom-style: solid;
+  border-left-style: none;
+  border-width: 1px;
+  border-color: #806d44;
+  color: #373737;
+}
+
+.td {
+  border-top-style: solid;
+  border-right-style: none;
+  border-bottom-style: solid;
+  border-left-style: none;
+  border-width: 1px;
+  border-color: #806d44;
+  color: #373737;
+  text-align: center;
+}
+
+.warning {
+  color: #373737;
+  background-color: #ff0000;
+  font-weight: bold;
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30pt;
+  border: none 1px;
+  border-radius: 25%;
+  width: 50%;
+  margin: 3% auto;
+  padding: 3px;
+  /* background-color:#fffffb; */
+  color: #373737;
+}
+
+.content {
+  width: 80%;
+  border: none;
+  margin: 20px auto;
+  color: black;
+}
+
+.bottom {
+  clear: both;
+  text-align: center;
+  margin: 30px auto;
+}
+
+.message {
+  width: 80%;
+  border: none;
+  margin: 20px auto;
+  font-weight: bold;
+  text-align: center;
+}
+
+#content {
+  color: black;
+}
+
+form fieldset ul li.right {
+  list-style: none; /* 블렛 기호 생략 */
+  margin: 10px 30px 10px 0px; /* top right bottom left */
+  text-align: right;
+}
+
+ul li.center {
+  list-style: none; /* 블렛 기호 생략 */
+  margin: 10px 10px 10px 10px; /* top right bottom left */
+  text-align: center;
+}
+
+form ul li {
+  list-style: none; /* 블렛 기호 생략 */
+  margin: 10px 20px 10px 60px;
+  color: #373737;
+}
+
+ul li {
+  list-style: none; /* 블렛 기호 생략 */
+  color: #373737;
+}
+
+ul li input {
+  color: #373737;
+}
+
+form fieldset legend {
+  margin: 0px auto;
+  color: #373737;
+}
+
+fieldset legend {
+  color: #373737;
+}
+
+form fieldset.top {
+  margin: 0px 30px;
+  border-color: #836334;
+  border-top: solid 1px #ff0080;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+}
+
+form input[type=text] {
+  border-top: none;
+  border-right: none;
+  border-bottom: solid 1px #55555;
+  border-left: none;
+  color: black;
+}
+
+textarea {
+  width: 100%;
+}
+
+input {
+  color: black;
+}
+
+img {
+  border: none;
+}
+
+fieldset.none_line {
+  margin: 0px 10px;
+  border-style: none;
+}
+
+#top_Menu {
+  margin-top: 10px;
+  width: 100%;
+  height: 200px;
+}
+
+.top_menu_label {
+  position: relative; /* body태그 기준(relative -> 부모태그 기준) */
+  top: 0%;
+  left: 0%;
+  color: #FFFFFF;
+}
+
+.top_menu_list {
+  position: relative;
+  top: 80%;
+  left: 0%;
+  background-color: rgba(50, 200, 200, 0.2);
+}
+
+.menu_link:link {
+  color: #373737;
+  text-decoration: none;
+}
+
+.menu_link:VISITED { /* 방문후 상태 */
+  text-decoration: none;
+  color: ##373737;
+}
+
+.menu_link:hover { /* A태그에 마우스가 올라간 상태 */
+  font-weight: bold;
+  color: #373737;
+  text-decoration: none;
+}
+
+.menu_link:ACTIVE { /* A태그를 클릭한 상태 */
+  text-decoration: none;
+  color: #000000;
+}
+
+.menu_line {
+  margin: 10px 0px 20px 0px;
+  width: 100%;
+  border-bottom: dotted 1px #AAAAAA;
+}
+
+.box1 {
+  border: solid 1px #000000;
+  padding: 0px 3px 0px 3px;
+  background-color: #123456;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.box1 A:link { /* 방문전 상태 */
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.box1 A:VISITED { /* 방문후 상태 */
+  text-decoration: none;
+  color: #ffff80;
+}
+
+.box1 A:hover { /* A태그에 마우스가 올라간 상태 */
+  text-decoration: none;
+  color: #58fcf8;
+}
+
+.box1 A:ACTIVE { /* A태그를 클릭한 상태 */
+  text-decoration: underline;
+  color: #58fcf8;
+}
+
+.popup1 {
+  padding: 5px;
+  position: absolute;
+  top: 20%; /* 상단 */
+  left: 30%; /* 좌측 모서리 */
+  width: 25%;
+  height: 30%;
+  background-color: #333333;
+  opacity: 0.8;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/* --------------- index.jsp -> 회원가입 css */
+  .container {
+      padding: 80px 120px;
   }
- 
-  body{
-    background-color: #ffe8e8; 
-    width:80%;
-    margin:0px auto;
-    background-image:url('/blog_v2jq/menu/images/bg_i.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: right bottom;
-    color: #373737;
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
   }
-  
-  TABLE{
-    border:none;
-    margin: 0px auto;
+  .person:hover {
+      border-color: #f1f1f1;
   }
-  
-  TD{
-    padding-left: 5px;
+  .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */
+      width: 100%; /* Set width to 100% */
+      margin: auto;
   }
-  
-  /* ====================================== */
-  /* 의사 클래스(pseudo-class)를 이용한  CSS 적용 */
-  /* 선언 순서가 변경되면 작동 안됨. link->visited->hover->active */
-  A:link{ /* 방문전 상태 */
-    text-decoration: none;
-    color:#373737;
+  .carousel-caption h3 {
+      color: #fff !important;
   }
-  
-  A:VISITED{ /* 방문후 상태 */
-    text-decoration: none;
-    color:#373737;
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
   }
-  
-  A:hover{ /* A태그에 마우스가 올라간 상태 */
-    text-decoration: underline;
-    color:#5555FF;
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
   }
-  
-  A:ACTIVE{ /* A태그를 클릭한 상태 */
-    text-decoration: underline;
-    color:#5555FF;
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
   }
-  /* ====================================== */
-  
-  .table{
-    border-style:none; 
-    background-color:#fff0f0; 
-    border-collapse: collapse; /* 셀 경계선 병합 */
-    margin: 0px auto;
-    width:100%;
-  } 
-  
-  .th{
-    border-top-style: solid;
-    border-right-style: none;
-    border-bottom-style: solid;
-    border-left-style: none;
-    border-width: 1px;
-    border-color: #806d44;
-    color:#373737;
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
   }
-   
-  .td{
-    border-top-style: solid;
-    border-right-style: none;
-    border-bottom-style: solid;
-    border-left-style: none;
-    border-width: 1px;
-    border-color: #806d44;
-    color:#373737;
-    text-align: center;
+  .thumbnail {
+      padding:0 0 15px 0;
+      border: none;
+      border-radius: 0;
   }
-  
-  .warning{
-    color:#373737;
-    background-color: #ff0000;
-    font-weight: bold;
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
   }
-  
-  .title{
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
       text-align: center;
-      font-weight: bold;
-      font-size: 25pt;
-      border:none 1px;
-      border-radius:25%;
-      width:50%;
-      margin:20px auto;
-      padding:3px;
-      /* background-color:#fffffb; */
-      color:#373737;
+      font-size: 30px;
   }
-  
-  .content{
-    width:80%;
-    border:none;
-    margin:20px auto;
-    color: black;
+  .modal-header, .modal-body {
+      padding: 40px 50px;
   }
-  
-  .bottom{
-    clear: both;
-    text-align: center;
-    margin: 30px auto;
-  }
-  
-  .message{
-    width:80%;
-    border:none;
-    margin:20px auto;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  #content{
-    color:black;
-  }
-  
-  form fieldset ul li.right{
-    list-style: none; /* 블렛 기호 생략 */
-    margin: 10px 30px 10px 0px; /* top right bottom left */
-    text-align: right;  
-  }
-  
-  ul li.center{
-    list-style: none; /* 블렛 기호 생략 */
-    margin: 10px 10px 10px 10px; /* top right bottom left */
-    text-align: center;  
-  } 
-  
-  form ul li{
-    list-style:none; /* 블렛 기호 생략 */
-    margin:10px 20px 10px 60px;
-    color: #373737;
-  }
-  
-  ul li{
-    list-style:none; /* 블렛 기호 생략 */
-    color: #373737;
-  }
-  
-  ul li input{
-    color: #373737;
-  }
-  
-  form fieldset legend{
-    margin:0px auto; 
-    color:#373737;
-  }
-  
-  fieldset legend{
-    color:#373737;
-  }
-  
-  form fieldset.top{
-    margin:0px 30px; 
-    border-color: #836334;
-    border-top: solid 1px #ff0080;
-    border-right: none;
-    border-bottom: none;
-    border-left: none;
-  }
-  
-  form input[type=text]{
-    border-top: none;
-    border-right: none;
-    border-bottom: solid 1px #55555;
-    border-left: none;
-    color:black;
-  }
-  
-  textarea{
-    width:100%;
-  }
-  
-  input{
-    color:black;
-  }
-  
-  
-  img{
-    border:none;
-  }
-  
-  fieldset.none_line{
-    margin:0px 10px;
-    border-style: none;
-  }
-  
-  #top_Menu{
-    margin-top:10px;
-    width:100%;
-    height: 200px;
-  } 
-  
-  .top_menu_label{
-    position: relative; /* body태그 기준(relative -> 부모태그 기준) */
-    top: 0%;
-    left: 0%;
-    color: #FFFFFF;
-  }
-  
-  .top_menu_list{
-    position: relative;
-    top: 80%;
-    left: 0%;  
-    background-color: rgba(50,200,200,0.2);
-  }
-  
-  .menu_link:link{
-    color:#373737;
-    text-decoration: none;
-    
-  }
-  
-  .menu_link:VISITED{ /* 방문후 상태 */
-    text-decoration: none;
-    color:##373737;
-  }
-  
-  .menu_link:hover{ /* A태그에 마우스가 올라간 상태 */
-    font-weight:bold;
-    color:#373737;
-    text-decoration: none;
-  }
-  
-  .menu_link:ACTIVE{ /* A태그를 클릭한 상태 */
-    text-decoration: none;
-    color:#000000;
-  } 
-  
-  .menu_line{
-    margin:10px 0px 20px 0px;
-    width:100%;
-    border-bottom: dotted 1px #AAAAAA;
-    
-  }
-  
- 
-  .box1{
-    border:solid 1px #000000;
-    padding:0px 3px 0px 3px;
-    background-color: #123456;
-    color:#FFFFFF;
-    font-weight: bold;
-  }
-  
-  .box1 A:link{ /* 방문전 상태 */
-    text-decoration: none;
-    color:#FFFFFF;
-  }
-  
-  .box1 A:VISITED{ /* 방문후 상태 */
-    text-decoration: none;
-    color:#ffff80;
-  }
-  
-  .box1 A:hover{ /* A태그에 마우스가 올라간 상태 */
-    text-decoration: none;
-    color:#58fcf8;
-  }
-  
-  .box1 A:ACTIVE{ /* A태그를 클릭한 상태 */
-    text-decoration: underline;
-    color:#58fcf8;
-  }
-  
-  .popup1{
-    padding:5px;
-    position:absolute;
-    top:20%; /* 상단 */
-    left:30%; /* 좌측 모서리 */
-    width:25%; 
-    height: 30%;
-    background-color: #333333;
-    opacity:0.8;
-    text-align: center;
-    color:#FFFFFF;
-  }
-  
