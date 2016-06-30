@@ -22,9 +22,12 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="dev.mvc.dbi" />
-	<context:component-scan base-package="dev.mvc.member" />
+	<context:component-scan base-package="dev.mvc" />
 	
+  <!-- 파일 전송이 있는 경우만 선언, File upload -->
+    <beans:bean id="multipartResolver"
+      class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    </beans:bean>
 	
 	
 </beans:beans>

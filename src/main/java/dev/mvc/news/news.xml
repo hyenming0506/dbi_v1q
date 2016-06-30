@@ -3,8 +3,14 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="dev.mvc.blog.BlogInter">
-
+<mapper namespace="dev.mvc.news.NewsInter">
   
-
+  <insert id="create" parameterType="NewsVO">
+    INSERT INTO news(title, content, ename, auth, file1, file2, size2, cnt, good, rdate)
+    VALUES(#{title}, #{content}, #{ename}, #{auth}, #{file1}, #{file2}, #{size2}, #{cnt}, #{good}, now())
+  </insert>
+  
+  <select id="list" resultType="NewsVO">
+    
+  </select>  
 </mapper>

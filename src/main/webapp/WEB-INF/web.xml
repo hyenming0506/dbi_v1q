@@ -36,6 +36,9 @@
     <filter-name>CharacterEncodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+ <!-- ************************************************************** -->
+ <!-- CKFINDER start -->
+ <!-- ************************************************************** -->
   <servlet>
     <servlet-name>ConnectorServlet</servlet-name>
     <servlet-class>com.ckfinder.connector.ConnectorServlet</servlet-class>
@@ -55,4 +58,7 @@
                    /ckfinder/core/connector/java/connector.java
           </url-pattern>
   </servlet-mapping>
+ <!-- ************************************************************** -->
+ <!-- CKFINDER end -->
+ <!-- ************************************************************** -->
 </web-app>

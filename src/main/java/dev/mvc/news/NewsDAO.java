@@ -18,4 +18,9 @@ public class NewsDAO implements NewsInter{
     
     return mapper;
   }
+
+  @Override
+  public int create(NewsVO newsVO) {
+    return mapper().create(newsVO);
+  }
 }
