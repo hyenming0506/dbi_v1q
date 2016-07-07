@@ -1,3 +1,7 @@
 eclipse.preferences.version=1
+encoding//src/main/java/dev/mvc/meeting/CalendarVO.java=UTF-8
+encoding//src/main/java/dev/mvc/meeting/myCal.java=UTF-8
+encoding//src/main/java/web/calender/myCal.java=UTF-8
+encoding//src/main/java/web/tool/Tool.java=UTF-8
 encoding//src/main/webapp/WEB-INF/doc/DBMS/member.ddl=MS949
 encoding//src/main/webapp/WEB-INF/doc/ERD/news.ddl=MS949

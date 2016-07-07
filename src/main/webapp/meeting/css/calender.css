@@ -1,0 +1,156 @@
+
+h1, h2, h3, h4, h5 {margin: 0}
+.dates span {
+  -webkit-transition: all .25s ease-in-out;
+}
+
+.base {
+  overflow: hidden;
+ /*  position: relative; */
+  display: block;
+  width: 900px; height: 560px;
+  margin: 5px auto;
+  border-radius: 8px;
+}
+
+/****/
+/* Calendar */
+/****/
+.calendar {
+  z-index: 1;
+  
+  display: block;
+   float: left; 
+  width: 395px; height: 290px;
+}
+  .calendar:before {
+    z-index: -1;
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0; left: 0; right: 0; bottom: 0;
+    -webkit-filter:blur(9px);
+  }
+header {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  height: 45px;
+}
+.back,
+
+.next {
+  position: absolute;
+  display: block;
+  top: 40px;
+  width: 40px; height: 40px;
+  -webkit-transform: rotate(45deg);
+  opacity: .5;
+  cursor: pointer;
+}
+.back {
+  left: 30px;
+  border-left: 1px solid #4f464b;
+  border-bottom: 1px solid #4f464b;
+  box-shadow:
+    -1px 1px 1px rgba(0,0,0,.1),
+    inset 1px -1px 1px rgba(0,0,0,.1);
+}
+.next {
+  right: 30px;
+  border-right: 1px solid #4f464b;
+  border-top: 1px solid #4f464b;
+  box-shadow:
+    1px -1px 1px rgba(0,0,0,.1),
+    inset -1px 1px 1px rgba(0,0,0,.1);
+}
+.month {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+  .month h3 {
+    font: 100 24px/25px 'Lato';
+    color: #4f464b;
+    -webkit-text-stroke: 1px rgba(0,0,0,0.05);
+    margin-bottom: 10px;
+  }
+.days {
+  display: block;
+  height: 40px;
+  padding: 0 10px;
+  background: rgba(152, 124, 148, .37);
+}
+.days span {
+  float: left;
+  width: 52px;
+  font: 100 26px/40px 'Lato';
+  color: #fff;
+  text-align: center;
+}
+.dates {
+  overflow: hidden;
+  display: block;
+  padding: 10px;
+}
+.dates span {
+  float: left;
+  width: 36px; height: 36px;
+  margin: 8px;
+  font: 100 26px/36px 'Lato';
+  color: #2c2e31;
+  text-align: center;
+  border-radius: 100%;
+  cursor: pointer;
+}
+  .dates span.disable {cursor: default;}
+  .dates span:hover:not(.disable),
+  .dates span.active {
+    box-shadow: 0 0 0 1px #742f2c;
+  }
+.events {
+  display: block;
+  overflow: hidden;
+  margin: 15px 20px;
+  padding: 30px 0;
+  border-top: 1px solid #4f464b;
+  font: 100 24px/30px 'Lato';
+  font-weight:bold;
+ /*  color: #4f464b; */
+  opacity: .5;
+}
+
+
+/****/
+/* Weather */
+/****/
+.weather {
+  display: block;
+  float: left;
+}
+.icon {
+  display: block;
+  float: left;
+  width: 52px; height: 28px;
+  margin: 42px 10px 0 20px;
+  opacity: .5;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/18468/sun.png") no-repeat;
+}
+.deg {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 20px 0 0 0;
+  font: 100 90px/100px 'Lato';
+  color: #fff;
+  opacity: .5;
+}
+  .deg:after {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 21px; right: -20px;
+    width: 13px; height: 13px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+  }

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dev.mvc.meeting.MeetingInter">
+  
+  <select id="list" resultType="RoomVO">
+    SELECT roomno, roomname, size, tables, chair, img, maxpeople
+    FROM room
+  </select>
+  
+  <select id="read" resultType="RoomVO" parameterType="int">
+    SELECT roomno, roomname, size, tables, chair, img, maxpeople
+    FROM room
+    WHERE roomno = #{roomno}
+  </select>
+  
+  <select id="read1" resultType="String" parameterType="int">
+    SELECT size
+    FROM room
+    WHERE roomno = #{roomno}
+  </select>
+  
+  <select id="read2" resultType="int" parameterType="int">
+    SELECT tables
+    FROM room
+    WHERE roomno = #{roomno}
+  </select>
+  
+  <select id="read3" resultType="int" parameterType="int">
+    SELECT chair
+    FROM room
+    WHERE roomno = #{roomno}
+  </select>
+  <select id="read4" resultType="int" parameterType="int">
+    SELECT maxpeople
+    FROM room
+    WHERE roomno = #{roomno}
+  </select>
+  <select id="read5" resultType="String" parameterType="int">
+    SELECT img
+    FROM room
+    WHERE roomno = #{roomno}
+  </select>
+  
+  
+</mapper>
